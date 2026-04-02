@@ -1,0 +1,31 @@
+$foreground: #0c0e0f
+$background: #edeff0
+$fg-1: #e4e6e7
+$accent: #81c19b
+
+html 
+    width: 100vw
+    display: flex
+    justify-content: center
+
+body
+    background-color: $background
+    color: $foreground
+    font-family: "JetBrains Mono", monospace
+    width: 35vw
+    text-align: center
+    overflow-x: hidden
+    margin: 0
+    padding: 0
+
+    h1
+        &:before
+            content: "# "
+            color: $accent
+
+    nav
+        display: flex
+        justify-content: space-around
+        padding-bottom: 0.5rem
+        margin-top: 1.5rem
+        border-bottom: 2px solid $fg-1

@@ -1,0 +1,29 @@
+html {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #edeff0;
+  color: #0c0e0f;
+  font-family: "JetBrains Mono", monospace;
+  width: 35vw;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+body h1:before {
+  content: "# ";
+  color: #81c19b;
+}
+body nav {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #e4e6e7;
+}
+
+/*# sourceMappingURL=index.css.map */
