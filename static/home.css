@@ -1,0 +1,22 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.profile-container .profile {
+  width: 40%;
+  background-color: #e4e6e7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile-container .profile img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 8px;
+}
+.profile-container .profile .links ul {
+  list-style: none;
+  text-align: left;
+}

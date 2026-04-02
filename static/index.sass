@@ -1,7 +1,4 @@
-$foreground: #0c0e0f
-$background: #edeff0
-$fg-1: #e4e6e7
-$accent: #81c19b
+@import "colors"
 
 html 
     width: 100vw
@@ -18,9 +15,25 @@ body
     margin: 0
     padding: 0
 
+    section
+        text-align: left
+
+        p
+            text-align: justify
+
     h1
         &:before
             content: "# "
+            color: $accent
+
+    h2
+        &:before
+            content: "## "
+            color: $accent
+
+    h3
+        &:before
+            content: "### "
             color: $accent
 
     nav
@@ -29,3 +42,11 @@ body
         padding-bottom: 0.5rem
         margin-top: 1.5rem
         border-bottom: 2px solid $fg-1
+
+        a
+            color: $foreground
+            cursor: pointer
+            text-decoration: none
+
+            &:hover
+                color: $accent

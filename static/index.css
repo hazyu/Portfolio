@@ -14,8 +14,22 @@ body {
   margin: 0;
   padding: 0;
 }
+body section {
+  text-align: left;
+}
+body section p {
+  text-align: justify;
+}
 body h1:before {
   content: "# ";
+  color: #81c19b;
+}
+body h2:before {
+  content: "## ";
+  color: #81c19b;
+}
+body h3:before {
+  content: "### ";
   color: #81c19b;
 }
 body nav {
@@ -24,6 +38,14 @@ body nav {
   padding-bottom: 0.5rem;
   margin-top: 1.5rem;
   border-bottom: 2px solid #e4e6e7;
+}
+body nav a {
+  color: #0c0e0f;
+  cursor: pointer;
+  text-decoration: none;
+}
+body nav a:hover {
+  color: #81c19b;
 }
 
 /*# sourceMappingURL=index.css.map */
