@@ -14,6 +14,11 @@
   border-radius: 8px;
   margin-top: 1rem;
 }
+@media screen and (max-width: 1500px) {
+  .posts a {
+    width: 100%;
+  }
+}
 .posts a:hover {
   color: #81c19b;
   transform: scale(1.05);
@@ -34,3 +39,5 @@
 article {
   text-align: left;
 }
+
+/*# sourceMappingURL=blog.css.map */
