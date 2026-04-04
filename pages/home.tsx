@@ -6,9 +6,12 @@ function Home() {
     return (
         <Base title="Hazyu - Home" css="home.css">
             <Fragment>
-            <Profile />
             <div>
-                <section>
+                <section class="welcome-container">
+                <div id="status" hx-get="/status" hx-trigger="load">
+                <Profile status="offline"/>
+                </div>
+                <div>
                 <h1>Welcome!</h1>
                  <p>
                     Hello. I go by Hazy. I am a full time programmer mainly focusing on high level web development and low level
@@ -20,6 +23,7 @@ function Home() {
                     I spend my time mostly programming but you will ocassionaly find me either playing video games or
                     taking notes. I spend far too much time in obsidian.
                 </p>
+                    </div>
                 </section>
                 <section>
                 <h1>About Me</h1>
@@ -27,6 +31,12 @@ function Home() {
                     I am 25 year old with a bachelors in application development. I mainly focus on programming games 
                     because I grew up playing a bunch of classics on the PS2. To this day, ratchet and clank is still
                     one of my favorite franchises.
+
+                </p>
+                <p>
+                    I am also a huge gunpla enjoyer and love spending my time building gunpla really poorly to piss off
+                    people who take the hobby far too seiriously. I don't even use an execato knife, I just rip the part
+                    out of the runner and use it as is. Dents and marks and all.
                 </p>
                 <article>
                 <h2>How I spend my time</h2>
