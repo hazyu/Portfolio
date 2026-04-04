@@ -1,6 +1,7 @@
 {
   "imports": {
-    "hono": "jsr:@hono/hono@^4.12.10"
+    "hono": "jsr:@hono/hono@^4.12.10",
+    "marked": "npm:marked@^17.0.5"
   },
   "tasks": {
     "start": "deno run --watch --allow-net --allow-read main.tsx"

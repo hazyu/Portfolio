@@ -12,7 +12,7 @@ function Base({title="Hazyu", css, children} : BaseProps)  : JSX.Element {
             <head>
                 <meta charset="utf-8" />
                 <title>{title}</title>
-                <link rel="stylesheet" href="index.css" />
+                <link rel="stylesheet" href="/index.css" />
                 { css && <link rel="stylesheet" href={css} /> }
                 <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
             </head>
