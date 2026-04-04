@@ -30,12 +30,18 @@ app.get("/status", async (c) => {
 
 app.get("/posts", (c) => {
 
-  const files = fs.readdirSync("posts");
+  const fileNames = fs.readdirSync("posts");
+  const files = []
+
+  fileNames.forEach((name) => {
+    const { birthtime } = fs.statSync(`posts/${name}`)
+    files.push({name: name, date: birthtime})
+  })
+  files.sort((a, b) => new Date(b.date) - new Date(a.date))
   return c.html(
     <Fragment>
-      { files.map((name, index) => {
-        const { birthtime } = fs.statSync(`posts/${name}`)
-        return <Post key={index} name={name.split(".")[0]} date={birthtime.toDateString()}/> 
+      { files.map((file, index) => {
+        return <Post key={index} name={file.name.split(".")[0]} date={file.date.toDateString()}/> 
       })}
     </Fragment>
   ) 

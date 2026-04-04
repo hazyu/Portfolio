@@ -12,6 +12,7 @@
   border: 0px dashed #81c19b;
   transition: all 0.25s ease-in-out;
   border-radius: 8px;
+  margin-top: 1rem;
 }
 .posts a:hover {
   color: #81c19b;
