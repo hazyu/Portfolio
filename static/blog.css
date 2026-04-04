@@ -40,4 +40,20 @@ article {
   text-align: left;
 }
 
+table {
+  border-collapse: collapse;
+}
+table thead {
+  text-align: left;
+  background-color: #e4e6e7;
+}
+table th {
+  padding: 0.25rem;
+  border: 1px solid #0c0e0f;
+}
+table td {
+  padding: 0.25rem;
+  border: 1px solid #0c0e0f;
+}
+
 /*# sourceMappingURL=blog.css.map */
