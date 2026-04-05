@@ -2,6 +2,9 @@
 
 .welcome-container
   display: flex
+
+  @media screen and (max-width: 1500px)
+    flex-direction: column
   
 .profile-container
     display: flex
@@ -12,6 +15,12 @@
         background-color: $fg-1
         border-radius: 8px
         margin-right: 1rem
+
+        @media screen and (max-width: 1500px)
+          width: 60%
+          display: flex 
+          justify-content: space-around
+          align-items: center
 
         .avatar-container
           width: 96px
@@ -58,6 +67,9 @@
               text-decoration: none
               color: $foreground
 
+              @media screen and (max-width: 1500px)
+                font-size: 1.5rem
+
               &:hover
                 color: $accent
 
@@ -69,3 +81,7 @@
               margin-right: 0.5rem
               filter: brightness(0) saturate(100%) invert(3%) sepia(86%) saturate(115%) hue-rotate(156deg) brightness(91%) contrast(96%)
               border-radius: 0
+              
+              @media screen and (max-width: 1500px)
+                width: 1.5rem
+                height: 1.5rem
