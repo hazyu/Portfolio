@@ -14,6 +14,11 @@ app.get("/", (c) => {
   return c.html(<Home />);
 });
 
+app.get("/robots.txt", (c) => {
+  const content = fs.readFileSync("robots.txt")
+  return c.text(content.toString())
+})
+
 app.get("/blog", (c) => {
   const fileNames: string[] = fs.readdirSync("posts");
   const files: Array<{ name: string; date: Date }> = [];
@@ -22,6 +27,7 @@ app.get("/blog", (c) => {
     const { birthtime } = fs.statSync(`posts/${name}`);
     files.push({ name: name, date: birthtime });
   });
+  //@ts-ignore dates crap
   files.sort((a, b) => new Date(b.date) - new Date(a.date));
   return c.html(<Blog files={files} />);
 });

@@ -1,0 +1,11 @@
+# Allow Google
+User-agent: Googlebot
+Allow: /
+
+# Allow DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Block everything else
+User-agent: *
+Disallow: /
