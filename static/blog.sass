@@ -1,0 +1,58 @@
+@import "colors"
+
+.posts
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+
+  a
+    text-decoration: none
+    color: $foreground
+    text-align: left
+    width: 45%
+    border: 0px dashed $accent
+    transition: all 0.25s ease-in-out
+    border-radius: 8px
+    margin-top: 1rem
+
+    @media screen and (max-width: 1500px)
+        width: 100%
+
+    &:hover
+      color: $accent
+      transform: scale(1.05)
+      border: 2px dashed $accent
+
+  .post
+
+    background-color: $fg-1
+    border-radius: 8px
+    padding: 1rem
+    display: flex
+    flex-direction: column
+
+
+
+    .title
+      font-weight: 800
+      font-size: 2rem
+
+article
+  text-align: left
+
+table
+    border-collapse: collapse
+
+    thead
+        text-align: left
+        background-color: $fg-1
+
+
+    th
+        padding: 0.25rem
+        border: 1px solid $foreground
+    td
+        padding: 0.25rem
+        border: 1px solid $foreground
