@@ -50,6 +50,7 @@ app.get("/blog/:name", async (c) => {
   return c.html(
     <Base title={`Hazyu - ${name}`} css="/blog.css">
       <article class="blog-post">
+        <h1>{name.replaceAll("-", " ")}</h1>
         {/*@ts-ignore */}
         {html(await marked(cleanMarkdown))}
       </article>

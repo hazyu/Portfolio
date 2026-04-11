@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <!-- Channel Metadata -->
     <title>Hazyu</title>
     <link>https://hazyvt.com</link>
     <description>Programming and gaming blog</description>
     <language>en-us</language>
 
-    <!-- Individual Item Entry -->
     <item>
       <title>My first blog post</title>
-      <link>https://hazyvt.com/blog/my-first-blog-post</link>
+      <link>https://hazyvt.com/blog/My-first-blog-post</link>
       <description>This is literally just my first blog post.</description>
       <pubDate>Wed, 25 March 2026</pubDate>
       <guid>https://hazyvt.com/blog/1</guid>
     </item>
 
-    <!-- Additional items go here -->
+    <item>
+      <title>How I made this website</title>
+      <link>https://hazyvt.com/blog/How-I-made-this-website</link>
+      <description>Talking about the technology that went into making my portfolio.</description>
+      <pubDate>Sat, 11 April 2026</pubDate>
+      <guid>https://hazyvt.com/blog/2</guid>
+    </item>
+
   </channel>
 </rss>
