@@ -60,7 +60,7 @@ app.get("/blog/:name", async (c) => {
 
 app.get("/rss", (c) => {
   const rss = Deno.readTextFileSync("rss.xml")
-  c.header("Content-Type", "application/xml")
+  c.header("Content-Type", "application/rss+xml")
   return c.text(rss)
 })
 
