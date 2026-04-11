@@ -58,4 +58,10 @@ app.get("/blog/:name", async (c) => {
   );
 });
 
+app.get("/rss", (c) => {
+  const rss = Deno.readTextFileSync("rss.xml")
+  c.header("Content-Type", "application/xml")
+  return c.text(rss)
+})
+
 Deno.serve(app.fetch);

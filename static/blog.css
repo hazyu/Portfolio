@@ -55,3 +55,15 @@ table td {
   padding: 0.25rem;
   border: 1px solid #0c0e0f;
 }
+
+img {
+  width: 85%;
+}
+
+.rss {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+}

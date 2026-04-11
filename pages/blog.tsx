@@ -19,6 +19,7 @@ function Blog(props: { files: Array<{ name: string; date: Date }> }) {
             );
           })}
         </div>
+        <a href="/rss"><img class="rss" src="rss.svg" /></a>
       </Fragment>
     </Base>
   );
