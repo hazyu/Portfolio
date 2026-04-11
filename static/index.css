@@ -52,3 +52,7 @@ body nav a {
 body nav a:hover {
   color: #81c19b;
 }
+
+.blog-post {
+  padding-bottom: 2rem;
+}

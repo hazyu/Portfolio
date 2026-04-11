@@ -10,10 +10,10 @@ function Blog(props: { files: Array<{ name: string; date: Date }> }) {
         <div class="posts">
           {props.files.map((file, index) => {
             return (
-              <Fragment key={index}>
+              <Fragment key={index.toString()}>
                 <Post
                   name={file.name.split(".")[0]}
-                  date={file.date.toDateString()}
+                  date={file.date.toLocaleString("en-GB").substring(0, 10)}
                 />
               </Fragment>
             );

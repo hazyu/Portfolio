@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@std/front-matter": "jsr:@std/front-matter@^1.0.9",
     "hono": "jsr:@hono/hono@^4.12.10",
     "marked": "npm:marked@^17.0.5"
   },

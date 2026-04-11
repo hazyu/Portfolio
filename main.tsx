@@ -7,6 +7,7 @@ import * as fs from "node:fs";
 import { marked } from "marked";
 import Base from "./pages/base.tsx";
 import { html } from "hono/html";
+import { extractYaml } from '@std/front-matter'
 
 const app = new Hono().use("/*", serveStatic({ root: "./static" }));
 
@@ -24,8 +25,11 @@ app.get("/blog", (c) => {
   const files: Array<{ name: string; date: Date }> = [];
 
   fileNames.forEach((name) => {
-    const { birthtime } = fs.statSync(`posts/${name}`);
-    files.push({ name: name, date: birthtime });
+    //const { birthtime } = fs.statSync(`posts/${name}`);
+    const txt = Deno.readTextFileSync(`./posts/${name}`);
+    const { attrs, body } = extractYaml<{title: string, date: Date, completed: boolean}>(txt);
+
+    files.push({ name: name, date: attrs.date });
   });
   //@ts-ignore dates crap
   files.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -42,11 +46,12 @@ app.get("/status", async (c) => {
 app.get("/blog/:name", async (c) => {
   const name = c.req.param("name");
   const file = fs.readFileSync(`posts/${name}.md`, "utf8");
+  const cleanMarkdown = file.replace(/^---[\s\S]*?---/, '')
   return c.html(
     <Base title={`Hazyu - ${name}`} css="/blog.css">
-      <article>
+      <article class="blog-post">
         {/*@ts-ignore */}
-        {html(await marked(file))}
+        {html(await marked(cleanMarkdown))}
       </article>
     </Base>,
   );
