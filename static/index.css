@@ -8,13 +8,13 @@ body {
   background-color: #edeff0;
   color: #0c0e0f;
   font-family: "JetBrains Mono", monospace;
-  width: 35vw;
+  width: 45vw;
   text-align: center;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1000px) {
   body {
     width: 80vw;
   }
