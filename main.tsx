@@ -48,9 +48,9 @@ app.get("/blog/:name", async (c) => {
   const file = fs.readFileSync(`posts/${name}.md`, "utf8");
   const cleanMarkdown = file.replace(/^---[\s\S]*?---/, '')
   return c.html(
-    <Base title={`${name}`} css="/blog.css">
+    <Base title={`${name.replaceAll("-", " ")}`} css="/blog.css">
       <article class="blog-post">
-        <h1>{name.replaceAll("-", " ")}</h1>
+        <h1 aria-hidden="true">{name.replaceAll("-", " ")}</h1>
         {/*@ts-ignore */}
         {html(await marked(cleanMarkdown))}
       </article>
