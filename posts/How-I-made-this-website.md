@@ -1,7 +1,7 @@
 ---
 title: How I made this website
 date: 2026-04-11
-completed: false
+completed: true
 ---
 
 
